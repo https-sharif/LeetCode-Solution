@@ -8,7 +8,7 @@ Given an array of strings `arr`, and an integer `k`, return the `k`<sup>`th`</su
 
 Note that the strings are considered in the **order in which they appear** in the array.
 
-## Solution Explanation
+## Approach
 
 1. **Count Occurrences**: Use an unordered map to count the occurrences of each string in the array.
 2. **Find Distinct Strings**: Iterate through the array to identify strings that appear exactly once.

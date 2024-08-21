@@ -27,5 +27,5 @@ Assuming Alice and Bob play optimally, return the maximum number of stones Alice
 
 ## Complexity
 
-- **Time Complexity**: $O(n^3)$ where `n` is the number of piles, due to the three nested loops.
-- **Space Complexity**: $O(n^2)$ for storing the `memo` and `suffix` arrays.
+- **Time Complexity**: $O(n^3)$, where `n` is the number of piles, due to the three nested loops.
+- **Space Complexity**: $O(n^2)$, for storing the `memo` and `suffix` arrays.

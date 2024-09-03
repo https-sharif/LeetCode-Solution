@@ -28,5 +28,5 @@ The solution involves two main steps. First, convert each character in the strin
 
 ## Complexity
 
-- **Time Complexity:** $O(n + k \times m)$, where `n` is the length of the string `s`, and `m` is the number of digits in `t`. The conversion step takes $O(n)$ time, and each transformation step takes $O(m)$ time, repeated `k` times.
-- **Space Complexity:** $O(m)$, where `m` is the maximum number of digits in the string `t`. This is required to store the intermediate transformed strings.
+- **Time Complexity:** $O(n + k \times m)$, where `n` is the length of the string `s`, and `m` is the number of digits in `t`.
+- **Space Complexity:** $O(m)$, where `m` is the maximum number of digits in the string `t`.

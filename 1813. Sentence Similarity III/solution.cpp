@@ -1,13 +1,12 @@
 class Solution {
 public:
     bool areSentencesSimilar(string sentence1, string sentence2) {
-        int n = sentence1.size(), m = sentence2.size();
-        
         vector<string> s1,s2;
 
         sentence1 += ' ';
         sentence2 += ' ';
 
+        int n = sentence1.size(), m = sentence2.size();
         string s = "";
         for(int i = 0; i < n; i++){
             if(sentence1[i] == ' '){
@@ -33,7 +32,6 @@ public:
         int s1_size = s1.size() - 1, s2_size = s2.size() - 1;
 
         int c1 = 0, c2 = 0;
-
         while(c1 <= s1_size && c2 <= s2_size){
             if(s1[c1] == s2[c2]){
                 c1++;
@@ -45,6 +43,7 @@ public:
             }
             else break;
         }
-        return (c1 + 1 == s1_size || c2 + 1 == s2_size) ? true : false;
+
+        return c1 == s1_size + 1 || c2 == s2_size + 1;
     }
 };

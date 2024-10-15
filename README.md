@@ -20,7 +20,7 @@ Check out my [LeetCode Profile](https://leetcode.com/u/sharif__islam/) to see mo
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/sharif-islam96403/leetcode-solution.git
+   git clone https://github.com/http-sharif/leetcode-solution.git
    ```
 
 2. Navigate to the problem folder:

@@ -1,24 +1,16 @@
 class Solution {
 public:
-    string createString(string s){
-        string t = "1";
-        for(int i = s.size() - 1; i >= 0; i++) {
-            if(s[i] == '0'){
-                t += '1';
-            }
-            else{
-                t += '0';
-            }
-        }
-        return s + t;
-    }
-
     char findKthBit(int n, int k) {
-        string s = "0";
-        for(int i = 0; i < n; i++){
-            s = createString(s);
-        }
+        if(k == 1) return '0';
 
-        return s[k - 1];
+        int len = (1 << n) - 1;
+        int mid = (len + 1) / 2;
+
+        if(k == mid) return '1';
+        else if(k < mid){
+            return findKthBit(n - 1, k);
+        }
+        char bit = findKthBit(n - 1, len - k + 1);
+        return (bit == '0') ? '1' : '0';
     }
-};
+}; 

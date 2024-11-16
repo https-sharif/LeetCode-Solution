@@ -35,7 +35,5 @@ The solution uses a helper array `a` to track the lengths of consecutive sequenc
 
 ## Complexity
 
-## Complexity
-
 - **Time Complexity:** $O(n)$, where `n` is the number of elements in `nums`.
 - **Space Complexity:** $O(n)$, as the solution uses two arrays (`a` and `ans`) of size `n`.

@@ -8,8 +8,9 @@ public:
             return ans;
         }
         if (k < 0) {
-            for (int i = n - 2, j = 0; j < n ; i--, j++) {
-                sum += code[i];
+            k = -k;
+            for (int i = n - 2, j = 0; j < k ; i--, j++) {
+                sum += code[(i + n) % n];
             }
             ans[n - 1] = sum;
             sum -= code[n - 2];

@@ -20,12 +20,12 @@ Check out my [LeetCode Profile](https://leetcode.com/u/sharif__islam/) to see mo
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/sharif-islam96403/leetcode-solution.git
+   git clone https://github.com/https-sharif/LeetCode-Solution.git
    ```
 
 2. Navigate to the problem folder:
    ```bash
-   cd leetCode-solution/(problem-name)
+   cd LeetCode-Solution/(problem-name)
    # Replace 'problem-name' with the actual problem name
    ```
 

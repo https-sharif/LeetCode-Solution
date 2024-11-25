@@ -2,52 +2,39 @@
 
 ## Problem Description
 
-You are given an `n x n` integer matrix. You can do the following operation **any** number of times:
+You are given an `n x n` integer `matrix`. You can do the following operation **any** number of times:
 
-- Choose any two **adjacent** elements of matrix and **multiply** each of them by `-1`.
-  
+- Choose any two **adjacent** elements of `matrix` and **multiply** each of them by `-1`.
+
 Two elements are considered **adjacent** if and only if they share a **border**.
 
 Your goal is to **maximize** the summation of the matrix's elements. Return *the **maximum** sum of the matrix's elements using the operation mentioned above*.
 
 ## Solution Approach
 
-The goal is to maximize the sum of the matrix. The solution involves calculating the total sum of absolute values of all elements and ensuring the final sum is maximized by minimizing the impact of negative elements.
+The approach involves calculating the sum of all absolute values in the matrix while counting the number of negative elements and finding the smallest absolute value. If the number of negatives is even, the maximum sum is the total sum of absolute values. If odd, the smallest absolute value is subtracted twice to maximize the sum after flipping.
 
-### Key Observations:
-
-1. If the count of negative numbers (`neg`) in the matrix is even, all numbers can be made non-negative for the maximum sum.
-2. If the count of negative numbers is odd, one element must remain negative. To minimize the reduction in sum, the element with the smallest absolute value is left negative.
-
-### Steps:
-
-1. Traverse the matrix to compute:
-   - The sum of the absolute values of all elements.
-   - Count of negative numbers (`neg`).
-   - The smallest absolute value (`mn`) in the matrix.
-2. If `neg` is even, return the total sum of absolute values.
-3. If `neg` is odd, subtract twice the smallest absolute value from the sum to account for the mandatory negative element.
 
 ## Code Explanation
 
 ### `maxMatrixSum` Function
 
 1. **Initialization**:
-   - `sum`: Accumulates the total absolute sum.
-   - `neg`: Counts negative elements.
-   - `mn`: Tracks the smallest absolute value in the matrix.
+   - `sum` holds the sum of absolute values of all elements.
+   - `neg` counts the number of negative values in the matrix.
+   - `mn` tracks the smallest absolute value in the matrix.
 
 2. **Matrix Traversal**:
-   - For each element:
-     - Update `neg` if the element is negative.
-     - Add the absolute value to `sum`.
-     - Update `mn` to track the smallest absolute value.
+   - Iterate over each element:
+     - If negative, increase `neg`, add the absolute value to `sum`, and update `mn`.
+     - If positive, add the value to `sum` and update `mn`.
 
 3. **Result Calculation**:
-   - If `neg % 2 == 0`, return `sum` (all elements can be made non-negative).
-   - Otherwise, subtract `2 * mn` from `sum` to account for the smallest value that remains negative.
+   - If the number of negative values (`neg`) is even, return `sum`.
+   - Otherwise, subtract `2 * mn` from `sum` to adjust for one unflipped negative.
+
 
 ## Complexity
 
 - **Time Complexity:** $O(n^2)$, where `n` is the size of the matrix.
-- **Space Complexity:** $O(1)$, as no extra space proportional to input size is used.
+- **Space Complexity:** $O(1)$, as only constant extra space is used.

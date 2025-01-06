@@ -5,7 +5,7 @@ public:
         int sz = shifts.size();
         vector<int> apply(n + 1, 0);
         
-        for(auto shift : shifts) {
+        for(auto& shift : shifts) {
             int start = shift[0];
             int end = shift[1];
             int direction = shift[2] ? 1 : -1;
